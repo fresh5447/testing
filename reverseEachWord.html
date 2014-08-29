@@ -1,0 +1,42 @@
+<script>
+
+    var testEqual = function(actual, expected){
+
+        if(actual === expected){
+            alert("pass");
+        }
+        else{
+            alert("fail");
+        }
+    };
+
+
+
+    function reverseWord(sentence){
+
+        //return sentence.split('').reverse().join('');
+
+        var resultArray = [];
+
+        var splitWords = sentence.toLowerCase().replace(/\s+/g,' ').split(' ');  //"split" "word"
+        splitWords.forEach(function(word){
+            var reversedWord =  word.split('').reverse().join(''); //"s'p'l'i't"-->'t'i'p'l's--->tipls
+            resultArray.push(reversedWord); // tipls--->[]---->["tipls", "drow"]
+
+
+        })
+        //Join resultArray with sentence
+       // return resultArray.join('').sentence;
+            return resultArray.join(' ');
+
+    }
+
+
+
+    testEqual(reverseWord("hello"),"olleh")
+    testEqual(reverseWord("hello there"),"olleh ereht")
+    testEqual(reverseWord("I love       coding"), "i evol gnidoc")
+
+
+
+</script>

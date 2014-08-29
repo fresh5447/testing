@@ -1,1 +1,56 @@
-Hello
+<style>
+    body {
+      font-size: 2em;
+      font-weight: bold;
+
+    }
+
+
+    .pass {
+        color:green;
+
+    }
+    .fail {
+        color:red;
+    }
+</style>
+
+
+<script>
+
+
+var testEqual = function(acutal, expected){
+   if (actual === expected){
+       document.write("<div>"PASS"</div>");
+   } else {
+       document.write("<div>"FAIL: " + expected + " !== " + actual + "</div>" );
+   }
+
+
+
+};
+
+    testEqual(argumentsSum(1,2,3), 6)
+    testEqual(argumentsSum(1,2,3,4),10)
+    testEqual(argumentsSum()0);
+    testEqual(argumentsSum("a") null)
+
+    function argumentsSum() {
+        var sum= 0, i=0;
+        while (i < arguments.length){
+            var e = arguments[i]
+            if (Number(e)=== e){
+                sum = sum + arguments[i]
+
+            } else {
+                return null;
+            }
+            i++;
+
+        }
+        return sum;
+    }
+
+
+</script>
+

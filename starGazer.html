@@ -1,0 +1,63 @@
+<style>
+    body {
+        font-size: 2em;
+        font-weight: bold;
+
+    }
+
+
+    .pass {
+        color:green;
+
+    }
+    .fail {
+        color:red;
+    }
+</style>
+
+
+
+
+
+<script>
+
+    //////FORMULA WILL RETURN HOROSCOPE BASED ON MONTH
+
+    var starGazer = function(month){
+    console.log(month)
+       //var month = prompt("What is your Birthmonth?");
+        var lc = month.toLowerCase();
+
+        var k = {"march":"Aries", "april": "Taurus","may": "Gemini","june": "Cancer","july": "Leo","august": "Virgo","september": "Libra","october": "Scorpio","november": "Sagittarius","december": "Capricorn","january": "Aquaris"};
+
+        return k[lc] ||  null;
+    };
+
+    //alert(starGazer());
+
+
+
+///////////////PASS FAIL FUNCTION
+var testEqual = function(actual,expected){
+
+    if (actual === expected){
+        alert('GREEEENNNNNN');
+
+    } else {
+        alert('REDDDDD');
+    }
+};
+
+
+//////////////TESTS
+    testEqual(starGazer("september"),"Libra")
+    testEqual(starGazer("SePtEmBeR"),"Libra")
+    testEqual(starGazer("76"),null)
+    testEqual(starGazer("sptmber"),null)
+
+
+
+
+
+
+</script>
